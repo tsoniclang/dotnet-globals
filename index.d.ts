@@ -13,6 +13,7 @@
 declare global {
   /**
    * Primitive types (required by TypeScript compiler)
+   * Note: null, void are intrinsic and don't need type aliases
    */
   type string = string;
   type number = number;
@@ -20,11 +21,9 @@ declare global {
   type symbol = symbol;
   type bigint = bigint;
   type undefined = undefined;
-  type null = null;
   type any = any;
   type unknown = unknown;
   type never = never;
-  type void = void;
 
   /**
    * Array type - intentionally minimal, no JS methods
