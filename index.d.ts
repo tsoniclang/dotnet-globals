@@ -33,6 +33,7 @@ declare global {
   interface Array<T> {
     // Intentionally NO length, map, filter, etc.
     // Use List<T> methods or LINQ instead
+    [n: number]: T;
   }
 
   interface ReadonlyArray<T> {
