@@ -1,0 +1,25 @@
+{
+  "name": "@tsonic/dotnet-globals",
+  "version": "0.1.0",
+  "description": "Global type definitions for Tsonic dotnet mode (noLib: true)",
+  "main": "index.d.ts",
+  "types": "index.d.ts",
+  "files": [
+    "index.d.ts",
+    "README.md"
+  ],
+  "keywords": [
+    "tsonic",
+    "typescript",
+    "dotnet",
+    "csharp",
+    "types",
+    "globals"
+  ],
+  "author": "Tsonic Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tsoniclang/dotnet-globals.git"
+  }
+}
