@@ -8,23 +8,13 @@
  *
  * Key principle: Array<T> must NOT have JS members like .length or .map
  * This enforces that dotnet mode uses BCL/LINQ patterns only.
+ *
+ * Array indices use `int` type from @tsonic/types for .NET compatibility.
  */
 
-declare global {
-  /**
-   * Primitive types (required by TypeScript compiler)
-   * Note: null, void are intrinsic and don't need type aliases
-   */
-  type string = string;
-  type number = number;
-  type boolean = boolean;
-  type symbol = symbol;
-  type bigint = bigint;
-  type undefined = undefined;
-  type any = any;
-  type unknown = unknown;
-  type never = never;
+import { int } from "@tsonic/types";
 
+declare global {
   /**
    * Array type - intentionally minimal, no JS methods
    * In dotnet mode, arrays are List<T> compatible
@@ -33,11 +23,11 @@ declare global {
   interface Array<T> {
     // Intentionally NO length, map, filter, etc.
     // Use List<T> methods or LINQ instead
-    [n: number]: T;
+    [n: int]: T;
   }
 
   interface ReadonlyArray<T> {
-    readonly [n: number]: T;
+    readonly [n: int]: T;
   }
 
   /**
