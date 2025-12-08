@@ -8,11 +8,7 @@
  *
  * Key principle: Array<T> must NOT have JS members like .length or .map
  * This enforces that dotnet mode uses BCL/LINQ patterns only.
- *
- * Array indices use `int` type from @tsonic/types for .NET compatibility.
  */
-
-import { int } from "@tsonic/types";
 
 declare global {
   /**
@@ -23,11 +19,11 @@ declare global {
   interface Array<T> {
     // Intentionally NO length, map, filter, etc.
     // Use List<T> methods or LINQ instead
-    [n: int]: T;
+    [n: number]: T;
   }
 
   interface ReadonlyArray<T> {
-    readonly [n: int]: T;
+    readonly [n: number]: T;
   }
 
   /**
