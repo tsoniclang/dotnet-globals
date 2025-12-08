@@ -12,20 +12,6 @@
 
 declare global {
   /**
-   * Primitive types (required by TypeScript compiler)
-   * Note: null, void are intrinsic and don't need type aliases
-   */
-  type string = string;
-  type number = number;
-  type boolean = boolean;
-  type symbol = symbol;
-  type bigint = bigint;
-  type undefined = undefined;
-  type any = any;
-  type unknown = unknown;
-  type never = never;
-
-  /**
    * Array type - intentionally minimal, no JS methods
    * In dotnet mode, arrays are List<T> compatible
    * Use LINQ methods via System.Linq, not JS array methods
