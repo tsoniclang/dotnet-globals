@@ -20,10 +20,12 @@ declare global {
     // Intentionally NO length, map, filter, etc.
     // Use List<T> methods or LINQ instead
     [n: number]: T;
+    [Symbol.iterator](): IterableIterator<T>;
   }
 
   interface ReadonlyArray<T> {
     readonly [n: number]: T;
+    [Symbol.iterator](): IterableIterator<T>;
   }
 
   /**
