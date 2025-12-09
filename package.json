@@ -1,6 +1,6 @@
 {
   "name": "@tsonic/dotnet-globals",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Global type definitions for Tsonic dotnet mode (noLib: true)",
   "main": "index.d.ts",
   "types": "index.d.ts",
